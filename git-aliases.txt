@@ -1,0 +1,42 @@
+alias.pop stash pop
+alias.b checkout -
+alias.bb checkout @{-2}
+alias.bbb checkout @{-3}
+alias.bbbb checkout @{-4}
+alias.st stash
+alias.pr pull --rebase
+alias.cg config --global
+alias.s status
+alias.lo log --graph --pretty=oneline --abbrev-commit --all
+alias.cgu config --global --unset-all
+alias.la config --get-regexp alias
+alias.chb checkout -b
+alias.c commit -am
+alias.sq rebase -i
+alias.lc cherry -v
+alias.ra rebase --abort
+alias.rc rebase --continue
+alias.ca commit --amend
+alias.ch checkout
+alias.pl pull
+alias.ph push
+alias.ad add . -v
+alias.rb branch -d
+alias.up push --set-upstream -v origin
+alias.lb branch --list
+alias.rbh branch -D
+alias.cp cherry-pick
+alias.ll log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold blue)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)'
+alias.cpc cherry-pick --continue
+alias.lla log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold cyan)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)' --all
+alias.fe fetch --all
+alias.mr !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+alias.re rebase
+alias.fl !sh -c 'git diff --name-only '$1'...'
+alias.rfl !sh -c 'git checkout '$1' -- '$2''
+alias.cpa cherry-pick --abort
+alias.del clean -df
+alias.dif !sh -c 'git difftool '$1''
+alias.mg mergetool
+alias.dd difftool -d
+alias.rh reset --hard

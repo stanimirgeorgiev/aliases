@@ -1,0 +1,28 @@
+Use /? for help 
+ 
+c=clear  
+cl=clear  
+clear=cls
+clink="C:\cmder\vendor\clink/clink_x64.exe" --cfgdir "C:\cmder\config" $*
+cmderr=cd /d "%CMDER_ROOT%"
+dev=npm run smoke-test:dev  
+e.=explorer .
+g=git $*  
+gen=npm run gen:all  
+gl=git log --oneline --all --graph --decorate  $*
+gnb=echo Checkingout branch: $1 && git ch $1 && echo Pulling from branch: $1 && git pl && echo Creating branch: $2 && git chb $2 && echo [32mSuccess !!![0m
+gob=git fetch -p && git branch -vv | awk '/: gone]/{print $1}'
+grb=git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
+history=cat "%CMDER_ROOT%\config\.history"
+i=npm install  
+l=npm run lint  
+ll=ls -al  
+ls=ls --show-control-chars -F --color $*
+pwd=cd
+save=echo [32mSaving cmder aliases![0m && alias | cat > cmder-aliases.txt &&  cat cmder-aliases.txt && echo [32mSaving git aliases![0m && git config --get-regexp alias | cat > git-aliases.txt && cat git-aliases.txt && echo [32mSuccess !!![0m
+t=npm run test  
+ui=npm run smoke-test:ui  
+unalias=alias /d $1
+vi=vim $*
+w=npm run build:watch  
+ww=npm install && npm run gen:all && npm run build:watch
