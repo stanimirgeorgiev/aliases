@@ -1,0 +1,67 @@
+[user]
+	name = Stanimir Georgiev
+	email = s.georgiev@fio.de
+[alias]
+	pop = stash pop
+	b = checkout -
+	bb = checkout @{-2}
+	bbb = checkout @{-3}
+	bbbb = checkout @{-4}
+	st = stash
+	pr = pull --rebase
+	cg = config --global
+	s = status
+	lo = log --graph --pretty=oneline --abbrev-commit --all
+	cgu = config --global --unset-all
+	la = config --get-regexp alias
+	chb = checkout -b
+	c = commit -am
+	sq = rebase -i
+	lc = cherry -v
+	ra = rebase --abort
+	rc = rebase --continue
+	ca = commit --amend
+	ch = checkout
+	pl = pull
+	ph = push
+	ad = add . -v
+	rb = branch -d
+	up = push --set-upstream -v origin
+	lb = branch --list
+	rbh = branch -D
+	cp = cherry-pick
+	ll = log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold blue)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)'
+	cpc = cherry-pick --continue
+	lla = log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold cyan)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)' --all
+	fe = fetch --all
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	re = rebase
+	fl = !sh -c 'git diff --name-only '$1'...'
+	rfl = !sh -c 'git checkout '$1' -- '$2''
+	cpa = cherry-pick --abort
+	del = clean -df
+	dif = !sh -c 'git difftool '$1''
+	mg = mergetool
+	dd = difftool -d
+	rh = reset --hard
+	auth = "eval \"SSH_AUTH_SOCK=/tmp/ssh-RznCpZxeLIBp/agent.4020; export SSH_AUTH_SOCK;\nSSH_AGENT_PID=11584; export SSH_AGENT_PID;\necho Agent pid 11584;\" && ssh-add /c/Users/s.georgiev//.ssh/new_rsa && :"
+[winUpdater]
+	recentlySeenVersion = 2.20.1.windows.1
+[difftool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+	cmd = winmerge.sh \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = winmerge
+[merge]
+	tool = winmerge
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+	cmd = \"C:\\Program Files (x86)\\WinMerge\\WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = false
+    keepBackup = false
+    keepTemporaries = false
