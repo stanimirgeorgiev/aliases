@@ -44,7 +44,6 @@
 	mg = mergetool
 	dd = difftool -d
 	rh = reset --hard
-	auth = "eval \"SSH_AUTH_SOCK=/tmp/ssh-RznCpZxeLIBp/agent.4020; export SSH_AUTH_SOCK;\nSSH_AGENT_PID=11584; export SSH_AGENT_PID;\necho Agent pid 11584;\" && ssh-add /c/Users/s.georgiev//.ssh/new_rsa && :"
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
 [difftool "winmerge"]
