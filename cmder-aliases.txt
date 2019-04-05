@@ -17,6 +17,7 @@ grb=git fetch --all -q && git branch -vv | awk '/: gone]/{print %LELE%}' | xargs
 history=cat "%CMDER_ROOT%\config\.history"
 i=npm install  
 l=npm run lint  
+lb=git branch --list | grep -i $1
 ll=git ll | head $1
 ls=ls --show-control-chars -F --color $*
 pwd=cd
