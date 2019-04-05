@@ -29,7 +29,7 @@ alias.cp cherry-pick
 alias.ll log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold blue)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)'
 alias.cpc cherry-pick --continue
 alias.lla log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold cyan)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)' --all
-alias.fe fetch --all
+alias.fe fetch --all --prune
 alias.mr !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 alias.re rebase
 alias.fl !sh -c 'git diff --name-only '$1'...'
