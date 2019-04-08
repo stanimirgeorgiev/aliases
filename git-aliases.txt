@@ -40,3 +40,4 @@ alias.dif !sh -c 'git difftool '$1''
 alias.mg mergetool
 alias.dd difftool -d
 alias.rh reset --hard
+alias.caa !git add . && git commit --amend --no-edit && git push -f && :

@@ -44,6 +44,7 @@
 	mg = mergetool
 	dd = difftool -d
 	rh = reset --hard
+	caa = !git add . && git commit --amend --no-edit && git push -f && :
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
 [difftool "winmerge"]
