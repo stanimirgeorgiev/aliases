@@ -2,6 +2,7 @@ Use /? for help
  
 auth=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT_INSTALL_ROOT%\usr\bin\" && agent
 c=clear  
+ca=git caa  
 cl=clear  
 clear=cls
 clink="C:\cmder\vendor\clink/clink_x64.exe" --cfgdir "C:\cmder\config" $*
