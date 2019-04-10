@@ -15,7 +15,7 @@
 	cgu = config --global --unset-all
 	la = config --get-regexp alias
 	chb = checkout -b
-	c = commit -am
+	c = !sh -c 'git add . && git commit -am '$1''
 	sq = rebase -i
 	lc = cherry -v
 	ra = rebase --abort
@@ -45,6 +45,8 @@
 	dd = difftool -d
 	rh = reset --hard
 	caa = !git add . && git commit --amend --no-edit && git push -f && :
+	h = log --follow -p --
+	ha = log --pretty=%an --follow --
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
 [difftool "winmerge"]

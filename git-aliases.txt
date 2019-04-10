@@ -11,7 +11,7 @@ alias.lo log --graph --pretty=oneline --abbrev-commit --all
 alias.cgu config --global --unset-all
 alias.la config --get-regexp alias
 alias.chb checkout -b
-alias.c commit -am
+alias.c !sh -c 'git add . && git commit -am '$1''
 alias.sq rebase -i
 alias.lc cherry -v
 alias.ra rebase --abort
@@ -41,3 +41,5 @@ alias.mg mergetool
 alias.dd difftool -d
 alias.rh reset --hard
 alias.caa !git add . && git commit --amend --no-edit && git push -f && :
+alias.h log --follow -p --
+alias.ha log --pretty=%an --follow --
