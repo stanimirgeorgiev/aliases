@@ -46,7 +46,7 @@
 	rh = reset --hard
 	caa = !git add . && git commit --amend --no-edit && git push -f && :
 	h = log --follow -p --
-	ha = log --pretty=%an --follow --
+	ha = log --pretty=format:'%h %an' --follow --
 	cw = !git add . && git commit -m 'WIP'
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
