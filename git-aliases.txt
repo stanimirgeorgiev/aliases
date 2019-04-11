@@ -44,3 +44,4 @@ alias.caa !git add . && git commit --amend --no-edit && git push -f && :
 alias.h log --follow -p --
 alias.ha log --pretty=format:'%h %an' --follow --
 alias.cw !git add . && git commit -m 'WIP'
+alias.cca !git add . && git commit --amend --no-edit && :

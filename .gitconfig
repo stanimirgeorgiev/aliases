@@ -48,6 +48,7 @@
 	h = log --follow -p --
 	ha = log --pretty=format:'%h %an' --follow --
 	cw = !git add . && git commit -m 'WIP'
+	cca = !git add . && git commit --amend --no-edit && :
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
 [difftool "winmerge"]
