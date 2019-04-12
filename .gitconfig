@@ -46,9 +46,13 @@
 	rh = reset --hard
 	caa = !git add . && git commit --amend --no-edit && git push -f && :
 	h = log --follow -p --
-	ha = log --pretty=format:'%h %an' --follow --
+	ha = log --pretty=format:'%h %an %C(magenta)%cr%C(reset)' --follow --
 	cw = !git add . && git commit -m 'WIP'
 	cca = !git add . && git commit --amend --no-edit && :
+	cpo = cherry-pick --strategy-option=ours
+	cpt = cherry-pick --strategy-option=theirs
+	bl = !sh -c 'git log --summary -u -L '$1':'$2''
+	ref = reflog
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
 [difftool "winmerge"]
