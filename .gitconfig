@@ -60,19 +60,19 @@
 [difftool "winmerge"]
     name = WinMerge
     trustExitCode = true
-	cmd = winmerge.sh \"$LOCAL\" \"$REMOTE\"
+    cmd = winmerge.sh \"$LOCAL\" \"$REMOTE\"
 [difftool]
-	prompt = false
+    prompt = false
 [diff]
-	tool = winmerge
+    tool = winmerge
 [merge]
-	tool = winmerge
+    tool = winmerge
 [mergetool "winmerge"]
     name = WinMerge
     trustExitCode = true
-	cmd = \"C:\\Program Files (x86)\\WinMerge\\WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    cmd = \"C:\\Program Files (x86)\\WinMerge\\WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [mergetool]
-	prompt = false
+    prompt = false
     keepBackup = false
     keepTemporaries = false
 
