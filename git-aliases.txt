@@ -49,3 +49,4 @@ alias.cpo cherry-pick --strategy-option=ours
 alias.cpt cherry-pick --strategy-option=theirs
 alias.bl !sh -c 'git log --summary -u -L '$1':'$2''
 alias.ref reflog
+alias.cb rev-parse --abbrev-ref HEAD

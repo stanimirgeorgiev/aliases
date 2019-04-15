@@ -53,6 +53,8 @@
 	cpt = cherry-pick --strategy-option=theirs
 	bl = !sh -c 'git log --summary -u -L '$1':'$2''
 	ref = reflog
+	cb = rev-parse --abbrev-ref HEAD
+	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
 [difftool "winmerge"]
