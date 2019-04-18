@@ -43,10 +43,12 @@ alias.rh reset --hard
 alias.caa !git add . && git commit --amend --no-edit && git push -f && :
 alias.h log --follow -p --
 alias.ha log --pretty=format:'%h %an %C(magenta)%cr%C(reset)' --follow --
-alias.cw !git add . && git commit -m 'WIP'
+alias.cw !git add . && git commit -m 'WIP' && git ph && :
 alias.cca !git add . && git commit --amend --no-edit && :
 alias.cpo cherry-pick --strategy-option=ours
 alias.cpt cherry-pick --strategy-option=theirs
 alias.bl !sh -c 'git log --summary -u -L '$1':'$2''
 alias.ref reflog
 alias.cb rev-parse --abbrev-ref HEAD
+alias.rhh !git reset --hard && git clean -df && :  
+alias.phh push -f
