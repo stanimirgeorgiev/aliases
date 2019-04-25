@@ -52,3 +52,5 @@ alias.ref reflog
 alias.cb rev-parse --abbrev-ref HEAD
 alias.rhh !git reset --hard && git clean -df && :  
 alias.phh push -f
+alias.reo rebase --strategy-option=theirs
+alias.ret rebase --strategy-option=ours

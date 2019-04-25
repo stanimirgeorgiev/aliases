@@ -56,6 +56,8 @@
 	cb = rev-parse --abbrev-ref HEAD
 	rhh = "!git reset --hard && git clean -df && :  "
 	phh = push -f
+	reo = rebase --strategy-option=theirs
+	ret = rebase --strategy-option=ours
 	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
