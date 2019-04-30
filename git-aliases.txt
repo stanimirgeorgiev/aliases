@@ -54,3 +54,5 @@ alias.rhh !git reset --hard && git clean -df && :
 alias.phh push -f
 alias.reo rebase --strategy-option=theirs
 alias.ret rebase --strategy-option=ours
+alias.rr !sh -c 'git reset HEAD@{'$1'}'
+alias.ddp !sh -c 'git rev-list --parents -n 1 '$1' | xargs git dd'
