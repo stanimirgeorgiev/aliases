@@ -10,6 +10,7 @@ clear=cls
 clink="C:\cmder\vendor\clink/clink_x64.exe" --cfgdir "C:\cmder\config" $*
 cmderr=cd /d "%CMDER_ROOT%"
 dev=npm run smoke-test:dev  
+dns=ipconfig /flushdns  
 e.=explorer .
 g=git $*  
 gen=npm run gen:all  
@@ -35,7 +36,7 @@ save=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT
 t=npm run test  
 ui=npm run smoke-test:ui  
 unalias=alias /d $1
-updateGRBcommnad=echo 'You should add set LELE=$1 in the cmder ventod init.cmd'  
+updategrbcommnad=echo 'You should add set LELE=$1 in the cmder ventod init.cmd'  
 vi=vim $*
 w=npm run build:watch  
 ww=npm install && npm run gen:all && npm run build:watch
