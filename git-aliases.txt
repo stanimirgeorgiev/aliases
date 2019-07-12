@@ -57,3 +57,5 @@ alias.ret rebase --strategy-option=ours
 alias.rr !sh -c 'git reset HEAD@{'$1'}'
 alias.ddp !sh -c 'git rev-list --parents -n 1 '$1' | xargs git dd'
 alias.cww !git add . && git commit -m 'WIP' && :
+alias.cm !git checkout master && git pull
+alias.rs git rebase --skip

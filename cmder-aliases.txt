@@ -21,12 +21,13 @@ gnm=echo Checkingout branch: master && git ch master &&  echo [41mResetting bra
 gob=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat && echo Checkingout master && git checkout master &&  echo [41mResetting branch: master[0m && git rh && git del && git fetch --all --prune -q && git pl && echo Branches to be removed: && echo ----------------------- [44m&& git branch -vv | awk "/: gone]/{print %LELE%}" && echo [0m-----------------------
 gr=git ll | grep -B 5 -A 5 $1
 grb=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat && echo Checkingout master && git checkout master &&  echo [41mResetting branch: master[0m && git rh && git del && git fetch --all --prune -q && git pl && git branch -vv | awk '/: gone]/{print %LELE%}' | xargs git branch -D && git gc
+gre=git lla $b grep -B 5 -A 5 $1  
 history=cat "%CMDER_ROOT%\config\.history"
 i=npm install  
 l=npm run lint  
 lb=git branch --list | grep -i $1
 lbc=git branch --list | grep -i $1 | xargs git ch && git rh && git del
-ll=git ll | head $1
+ll=git ll $b head -$1  
 log=C:\Windows\system32\inetsrv\appcmd list traces /text:path  
 logg=%windir%\system32\inetsrv\appcmd list trace $1 /text:path
 ls=ls --show-control-chars -F --color $*

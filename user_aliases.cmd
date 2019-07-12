@@ -30,7 +30,6 @@ i=npm install
 l=npm run lint  
 lb=git branch --list | grep -i $1
 lbc=git branch --list | grep -i $1 | xargs git ch && git rh && git del
-ll=git ll | head $1
 log=C:\Windows\system32\inetsrv\appcmd list traces /text:path  
 logg=%windir%\system32\inetsrv\appcmd list trace $1 /text:path
 ls=ls --show-control-chars -F --color $*
@@ -46,3 +45,5 @@ vi=vim $*
 w=npm run build:watch  
 ww=npm install && npm run gen:all && npm run build:watch  
 updatelocal=cp -f .\.gitconfig %home% -v $t cp -f .\agent.cmd "%GIT_INSTALL_ROOT%\usr\bin\" -v $t setx backup_alias %cd% $t echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat. Create ssh keys and place them in C:\Users\s.georgiev\.ssh in order the save command to work  
+gre=git lla $b grep -B 5 -A 5 $1  
+ll=git ll $b head -$1  

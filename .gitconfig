@@ -61,25 +61,33 @@
 	rr = !sh -c 'git reset HEAD@{'$1'}'
 	ddp = !sh -c 'git rev-list --parents -n 1 '$1' | xargs git dd'
 	cww = !git add . && git commit -m 'WIP' && :
+	cm = !git checkout master && git pull
+	rs = git rebase --skip
 	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
-[difftool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-    cmd = winmerge.sh \"$LOCAL\" \"$REMOTE\"
+
 [difftool]
     prompt = false
-[diff]
-    tool = winmerge
-[merge]
-    tool = winmerge
-[mergetool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-    cmd = \"C:\\Program Files (x86)\\WinMerge\\WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
 [mergetool]
     prompt = false
     keepBackup = false
     keepTemporaries = false
+
+[merge]
+    tool = winmerge
+
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+
+[diff]
+    tool = winmerge
+
+[difftool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
 
