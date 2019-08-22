@@ -63,6 +63,7 @@
 	cww = !git add . && git commit -m 'WIP' && :
 	cm = !git checkout master && git pull
 	rs = git rebase --skip
+	fll = !sh -c 'git diff --name-only '$1' '$2''
 	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1

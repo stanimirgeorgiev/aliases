@@ -30,6 +30,7 @@ lbc=git branch --list | grep -i $1 | xargs git ch && git rh && git del
 ll=git ll $b head -$1  
 log=C:\Windows\system32\inetsrv\appcmd list traces /text:path  
 logg=%windir%\system32\inetsrv\appcmd list trace $1 /text:path
+lr=ls -R ./ $t awk ' /:$/  
 ls=ls --show-control-chars -F --color $*
 ma=git ch master    
 pa=git cb | xargs -l bash -c "git show-branch --all 2>/c/1 | grep '\*' | grep -vm 1 $0 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//'" | xargs
@@ -41,5 +42,5 @@ unalias=alias /d $1
 updategrbcommnad=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat  
 updatelocal=cp -f .\.gitconfig %home% -v $t cp -f .\agent.cmd "%GIT_INSTALL_ROOT%\usr\bin\" -v $t setx backup_alias %cd% $t echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat. Create ssh keys and place them in C:\Users\s.georgiev\.ssh in order the save command to work  
 vi=vim $*
-w=npm run build:watch  
+w=npm install $t npm run build:watch  
 ww=npm install && npm run gen:all && npm run build:watch  

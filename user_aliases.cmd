@@ -42,8 +42,9 @@ ui=npm run smoke-test:ui
 unalias=alias /d $1
 updategrbcommnad=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat  
 vi=vim $*
-w=npm run build:watch  
 ww=npm install && npm run gen:all && npm run build:watch  
 updatelocal=cp -f .\.gitconfig %home% -v $t cp -f .\agent.cmd "%GIT_INSTALL_ROOT%\usr\bin\" -v $t setx backup_alias %cd% $t echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat. Create ssh keys and place them in C:\Users\s.georgiev\.ssh in order the save command to work  
 gre=git lla $b grep -B 5 -A 5 $1  
 ll=git ll $b head -$1  
+w=npm install $t npm run build:watch  
+lr=ls -R ./ $t awk ' /:$/  
