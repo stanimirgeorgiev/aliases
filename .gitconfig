@@ -15,7 +15,7 @@
 	cgu = config --global --unset-all
 	la = config --get-regexp alias
 	chb = checkout -b
-	c = !git add . && git commit -m
+	c = !sh -c 'git add . && git commit -m $1 && git push'
 	sq = rebase -i
 	lc = cherry -v
 	ra = rebase --abort
