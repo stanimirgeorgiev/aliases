@@ -1,0 +1,2 @@
+<readonly-link ng-if="::(estate &amp;&amp; estate.id)" value="::redirect" disable="disable" link-caption="{{::linkCaption}}" i18n-caption="{{::i18nCaption}}" class="ng-scope"><div class="readonly-row">↵    <!-- ngIf: ::value -->↵</div>↵</readonly-link>
+VF-6422 Update the tasks appointments according the design

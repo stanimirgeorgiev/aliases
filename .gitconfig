@@ -65,6 +65,8 @@
 	rs = git rebase --skip
 	fll = !sh -c 'git diff --name-only '$1' '$2''
 	chm = checkout master
+	chmp = !git checkout master && git pl && git b
+	rema = !git checkout master && git pl && git b && git re master
 	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1

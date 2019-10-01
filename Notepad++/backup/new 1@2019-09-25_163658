@@ -1,0 +1,11 @@
+that.$onDestroy = () => {
+	$element.remove();
+}
+
+scope.$on('$destroy', () => {elem.remove()});
+
+	this.$onDestroy = () => {
+		$element.remove();
+	}
+	
+	FcSwiperRenderService.$inject = ["$element"];
