@@ -1,0 +1,97 @@
+[user]
+	name = Stanimir Georgiev
+	email = s.georgiev@fio.de
+[alias]
+	pop = stash pop
+	b = checkout -
+	bb = checkout @{-2}
+	bbb = checkout @{-3}
+	bbbb = checkout @{-4}
+	st = stash
+	pr = pull --rebase
+	cg = config --global
+	s = status
+	lo = log --graph --pretty=oneline --abbrev-commit --all
+	cgu = config --global --unset-all
+	la = config --get-regexp alias
+	chb = checkout -b
+	c = !sh -c 'git add . && git commit -m $1 && git push'
+	sq = rebase -i
+	lc = cherry -v
+	ra = rebase --abort
+	rc = rebase --continue
+	ca = commit --amend
+	ch = checkout
+	pl = pull
+	ph = push
+	ad = add . -v
+	rb = branch -d
+	up = push --set-upstream -v origin
+	lb = branch --list
+	rbh = branch -D
+	cp = cherry-pick
+	ll = log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold blue)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)'
+	cpc = cherry-pick --continue
+	lla = log --graph --abbrev-commit --oneline --decorate=no --date=short --format=format:'%C(bold cyan)%h%C(reset) %C(magenta)%cr%C(auto)%d%n%C(reset) %C(reset)%w(150)%s %C(bold black)%ae%n%C(reset)' --all
+	fe = fetch --all --prune
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	re = rebase
+	fl = !sh -c 'git diff --name-only '$1'...'
+	rfl = !sh -c 'git checkout '$1' -- '$2''
+	cpa = cherry-pick --abort
+	del = clean -df
+	dif = !sh -c 'git difftool '$1''
+	mg = mergetool
+	dd = difftool -d
+	rh = reset --hard
+	caa = !git add . && git commit --amend --no-edit && git push -f && :
+	h = log --follow -p --
+	ha = log --pretty=format:'%h %an %C(magenta)%cr%C(reset)' --follow --
+	cw = !git add . && git commit -m 'WIP' && git ph && :
+	cca = !git add . && git commit --amend --no-edit && :
+	cpo = cherry-pick --strategy-option=ours
+	cpt = cherry-pick --strategy-option=theirs
+	bl = !sh -c 'git log --summary -u -L '$1':'$2''
+	ref = reflog
+	cb = rev-parse --abbrev-ref HEAD
+	rhh = "!git reset --hard && git clean -df && :  "
+	phh = push -f
+	reo = rebase --strategy-option=theirs
+	ret = rebase --strategy-option=ours
+	rr = !sh -c 'git reset HEAD@{'$1'}'
+	ddp = !sh -c 'git rev-list --parents -n 1 '$1' | xargs git dd'
+	cww = !git add . && git commit -m 'WIP' && :
+	cm = !git checkout master && git pull
+	rs = git rebase --skip
+	fll = !sh -c 'git diff --name-only '$1' '$2''
+	chm = checkout master
+	chmp = !git checkout master && git pl && git b
+	rema = !git checkout master && git pl && git b && git re master
+	
+[winUpdater]
+	recentlySeenVersion = 2.20.1.windows.1
+
+[difftool]
+    prompt = false
+
+[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+
+[merge]
+    tool = winmerge
+
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "/c/Program\\ Files/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+
+[diff]
+    tool = winmerge
+
+[difftool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+	cmd = "/c/Program\\ Files/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+

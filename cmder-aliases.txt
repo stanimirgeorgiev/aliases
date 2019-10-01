@@ -35,12 +35,12 @@ ls=ls --show-control-chars -F --color $*
 ma=git ch master    
 pa=git cb | xargs -l bash -c "git show-branch --all 2>/c/1 | grep '\*' | grep -vm 1 $0 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//'" | xargs
 pwd=cd
-save=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT_INSTALL_ROOT%\usr\bin\" && agent && d: && cd %backup_alias% && echo [32mSaving cmder aliases![0m && alias | cat > cmder-aliases.txt &&  cat cmder-aliases.txt && echo [32mSaving git aliases![0m && git config --get-regexp alias | cat > git-aliases.txt && cat git-aliases.txt && echo [32mSuccess !!![0m && cp -f "%home%\.gitconfig" ./ -v && cp -f "%GIT_INSTALL_ROOT%\usr\bin\agent.cmd" ./ -v && cp -f "%CMDER_ROOT%\config\user_aliases.cmd" ./ -v && git add . && git commit -m "%date%" && echo [32mCommited !!![0m  && git push && echo [32mPushed !!![0m && echo && echo exiting in 5s && timeout 5 && exit
+save=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT_INSTALL_ROOT%\usr\bin\" && agent && cd %backup_alias% && echo [32mSaving cmder aliases![0m && alias | cat > cmder-aliases.txt &&  cat cmder-aliases.txt && echo [32mSaving git aliases![0m && git config --get-regexp alias | cat > git-aliases.txt && cat git-aliases.txt && echo [32mSuccess !!![0m && cp -f "%home%\.gitconfig" ./ -v && cp -f "%GIT_INSTALL_ROOT%\usr\bin\agent.cmd" ./ -v && cp -f "%CMDER_ROOT%\config\user_aliases.cmd" ./ -v && git add . && git commit -m "%date%" && echo [32mCommited !!![0m  && git push && echo [32mPushed !!![0m && echo && echo exiting in 5s && timeout 5 && exit
 t=npm run test  
 ui=npm run smoke-test:ui  
 unalias=alias /d $1
 updategrbcommnad=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat  
-updatelocal=cp -f .\.gitconfig %home% -v $t cp -f .\agent.cmd "%GIT_INSTALL_ROOT%\usr\bin\" -v $t setx backup_alias %cd% $t echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat. Create ssh keys and place them in C:\Users\s.georgiev\.ssh in order the save command to work  
+updatelocal=cp -f .\.gitconfig %home% -v $t cp -f .\agent.cmd "%GIT_INSTALL_ROOT%\usr\bin" -v $t setx backup_alias %cd% $t echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat. Create ssh keys and place them in C:\Users\s.georgiev\.ssh in order the save command to work  
 vi=vim $*
 w=npm install $t npm run build:watch  
 ww=npm install && npm run gen:all && npm run build:watch  
