@@ -60,6 +60,7 @@ alias.cww !git add . && git commit -m 'WIP' && :
 alias.cm !git checkout master && git pull
 alias.rs git rebase --skip
 alias.fll !sh -c 'git diff --name-only '$1' '$2''
-alias.chm checkout master
+alias.chm !git checkout master && git pull && :
 alias.chmp !git checkout master && git pl && git b
 alias.rema !git checkout master && git pl && git b && git re master
+alias.r reset

@@ -64,9 +64,10 @@
 	cm = !git checkout master && git pull
 	rs = git rebase --skip
 	fll = !sh -c 'git diff --name-only '$1' '$2''
-	chm = checkout master
+	chm = !git checkout master && git pull && :
 	chmp = !git checkout master && git pl && git b
 	rema = !git checkout master && git pl && git b && git re master
+	r = reset
 	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
@@ -85,7 +86,7 @@
 [mergetool "winmerge"]
     name = WinMerge
     trustExitCode = true
-    cmd = "/c/Program\\ Files/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
 
 [diff]
     tool = winmerge
@@ -93,5 +94,5 @@
 [difftool "winmerge"]
     name = WinMerge
     trustExitCode = true
-	cmd = "/c/Program\\ Files/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
 
