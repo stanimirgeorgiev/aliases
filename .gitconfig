@@ -61,10 +61,9 @@
 	rr = !sh -c 'git reset HEAD@{'$1'}'
 	ddp = !sh -c 'git rev-list --parents -n 1 '$1' | xargs git dd'
 	cww = !git add . && git commit -m 'WIP' && :
-	cm = !git checkout master && git pull
+	cm = !git checkout master && git pull && :
 	rs = git rebase --skip
 	fll = !sh -c 'git diff --name-only '$1' '$2''
-	chm = !git checkout master && git pull && :
 	chmp = !git checkout master && git pl && git b
 	rema = !git checkout master && git pl && git b && git re master
 	r = reset
