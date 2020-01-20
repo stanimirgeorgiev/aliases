@@ -7,7 +7,6 @@
 ~1=~0,-1  
 auth=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT_INSTALL_ROOT%\usr\bin\" && agent
 c=clear  
-ca=git caa  
 cdh=C: \\  
 ch=git ch $1 && git rhh
 cl=clear  

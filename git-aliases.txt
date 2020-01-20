@@ -11,13 +11,13 @@ alias.lo log --graph --pretty=oneline --abbrev-commit --all
 alias.cgu config --global --unset-all
 alias.la config --get-regexp alias
 alias.chb checkout -b
-alias.c !sh -c 'git add . && git commit -m $1 && git push'
+alias.c !git commit -m $2 $1 && git push && :
 alias.sq rebase -i
 alias.lc cherry -v
 alias.ra rebase --abort
 alias.rc rebase --continue
 alias.ca commit --amend
-alias.ch checkout
+alias.ch !git checkout $1 && git pull && :
 alias.pl pull
 alias.ph push
 alias.ad add . -v
