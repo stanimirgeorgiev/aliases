@@ -51,7 +51,7 @@
 	cca = !git add . && git commit --amend --no-edit && :
 	cpo = cherry-pick --strategy-option=ours
 	cpt = cherry-pick --strategy-option=theirs
-	bl = !sh -c 'git log --summary -u -L '$1':'$2''
+	bl = !sh -c 'git log --pretty=short -u -L '$1':'$2''
 	ref = reflog
 	cb = rev-parse --abbrev-ref HEAD
 	rhh = "!git reset --hard && git clean -df && :  "
