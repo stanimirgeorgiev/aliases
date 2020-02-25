@@ -48,3 +48,6 @@ ll=git ll $b head -$1
 w=npm install $t npm run build:watch  
 lr=ls -R ./ $t awk ' /:$/  
 test=npm run test:all  
+d=docker $*  
+xargs='xargs '  
+ld=git rev-parse --abbrev-ref HEAD $b xargs -I '{}' git diff '{}' origin/'{}'  
