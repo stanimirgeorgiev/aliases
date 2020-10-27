@@ -15,7 +15,7 @@
 	cgu = config --global --unset-all
 	la = config --get-regexp alias
 	chb = checkout -b
-	c = !git commit -m $2 $1 && git push && :
+	c = !git ad && git commit -m \"$1\" && git push && :
 	sq = rebase -i
 	lc = cherry -v
 	ra = rebase --abort
@@ -67,6 +67,8 @@
 	chmp = !git checkout master && git pl && git b
 	rema = !git checkout master && git pl && git b && git re master
 	r = reset
+	rma = rebase master
+	lll = !sh -c 'git show $1 --no-patch'
 	
 [winUpdater]
 	recentlySeenVersion = 2.20.1.windows.1
@@ -95,3 +97,7 @@
     trustExitCode = true
 	cmd = "/c/Program\\ Files/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
 
+[credential]
+	helper = manager
+[core]
+	ignorecase = true

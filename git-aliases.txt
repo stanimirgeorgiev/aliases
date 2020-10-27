@@ -11,7 +11,7 @@ alias.lo log --graph --pretty=oneline --abbrev-commit --all
 alias.cgu config --global --unset-all
 alias.la config --get-regexp alias
 alias.chb checkout -b
-alias.c !git commit -m $2 $1 && git push && :
+alias.c !git ad && git commit -m "$1" && git push && :
 alias.sq rebase -i
 alias.lc cherry -v
 alias.ra rebase --abort
@@ -63,3 +63,5 @@ alias.fll !sh -c 'git diff --name-only '$1' '$2''
 alias.chmp !git checkout master && git pl && git b
 alias.rema !git checkout master && git pl && git b && git re master
 alias.r reset
+alias.rma rebase master
+alias.lll !sh -c 'git show $1 --no-patch'
