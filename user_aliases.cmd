@@ -25,7 +25,6 @@ gob=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\in
 gr=git ll | grep -B 5 -A 5 $1
 grb=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat && echo Checkingout master && git checkout master &&  echo [41mResetting branch: master[0m && git rh && git del && git fetch --all --prune -q && git pl && git branch -vv | awk '/: gone]/{print %LELE%}' | xargs git branch -D && git gc
 history=cat "%CMDER_ROOT%\config\.history"
-i=npm install  
 l=npm run lint  
 lb=git branch --list | grep -i $1
 lbc=git branch --list | grep -i $1 | xargs git ch && git rh && git del
@@ -52,3 +51,9 @@ xargs='xargs '
 ld=git rev-parse --abbrev-ref HEAD $b xargs -I '{}' git diff '{}' origin/'{}'  
 ww=call ..\build-scripts\backend.build.bat $t npm install $t$t npm run gen:all $t$t npm run build:watch  
 check=git ls-files -v $b grep "S "  
+s=npm start  
+i=npm install $t npm ddp  
+ss=npm i $t npm ddp $t npm start  
+ii=npm i -D $* $t npm ddp  
+ff=npm i $t cd example\ $t npm i $t cd .. $t npm start  
+rm-all=del /S $1  

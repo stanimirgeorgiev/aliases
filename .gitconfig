@@ -101,3 +101,5 @@
 	helper = manager
 [core]
 	ignorecase = true
+##[credential]
+##	helper = wincred
