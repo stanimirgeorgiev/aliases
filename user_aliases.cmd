@@ -24,7 +24,6 @@ gnm=echo Checkingout branch: master && git ch master &&  echo [41mResetting bra
 gob=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat && echo Checkingout master && git checkout master &&  echo [41mResetting branch: master[0m && git rh && git del && git fetch --all --prune -q && git pl && echo Branches to be removed: && echo ----------------------- [44m&& git branch -vv | awk "/: gone]/{print %LELE%}" && echo [0m-----------------------
 gr=git ll | grep -B 5 -A 5 $1
 grb=echo You should add 'set LELE=$$$11' before exit line in the cmder\vendor\init.bat && echo Checkingout master && git checkout master &&  echo [41mResetting branch: master[0m && git rh && git del && git fetch --all --prune -q && git pl && git branch -vv | awk '/: gone]/{print %LELE%}' | xargs git branch -D && git gc
-history=cat "%CMDER_ROOT%\config\.history"
 l=npm run lint  
 lb=git branch --list | grep -i $1
 lbc=git branch --list | grep -i $1 | xargs git ch && git rh && git del
@@ -34,7 +33,7 @@ ls=ls --show-control-chars -F --color $*
 ma=git ch master    
 pa=git cb | xargs -l bash -c "git show-branch --all 2>/c/1 | grep '\*' | grep -vm 1 $0 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//'" | xargs
 pwd=cd
-save=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT_INSTALL_ROOT%\usr\bin\" && agent && cd %backup_alias% && echo [32mSaving cmder aliases![0m && alias | cat > cmder-aliases.txt &&  cat cmder-aliases.txt && echo [32mSaving git aliases![0m && git config --get-regexp alias | cat > git-aliases.txt && cat git-aliases.txt && echo [32mSuccess !!![0m && cp -f "%home%\.gitconfig" ./ -v && cp -f "%GIT_INSTALL_ROOT%\usr\bin\agent.cmd" ./ -v && cp -f "%CMDER_ROOT%\config\user_aliases.cmd" ./ -v && git add . && git commit -m "%date%" && echo [32mCommited !!![0m  && git push && echo [32mPushed !!![0m && echo && echo exiting in 5s && timeout 5 && exit
+save=call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit && c: && cd "%GIT_INSTALL_ROOT%\usr\bin\" && agent && d: && cd %backup_alias% && echo [32mSaving cmder aliases![0m && alias | cat > cmder-aliases.txt &&  cat cmder-aliases.txt && echo [32mSaving git aliases![0m && git config --get-regexp alias | cat > git-aliases.txt && cat git-aliases.txt && echo [32mSuccess !!![0m && cp -f "%home%\.gitconfig" ./ -v && cp -f "%GIT_INSTALL_ROOT%\usr\bin\agent.cmd" ./ -v && cp -f "%CMDER_ROOT%\config\user_aliases.cmd" ./ -v && git add . && git commit -m "%date%" && echo [32mCommited !!![0m  && git push && echo [32mPushed !!![0m && echo && echo exiting in 5s && timeout 5 && exit
 t=npm run test  
 ui=npm run smoke-test:ui  
 unalias=alias /d $1
